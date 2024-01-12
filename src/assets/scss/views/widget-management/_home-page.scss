@@ -1,0 +1,15 @@
+.dnd-column {
+    background: var(--secondary-700);
+}
+.widget-title{
+    border-bottom: 1px solid var(--secondary-900);
+}
+.drop-zone {
+   height: calc(100% - 45px); 
+}
+.dnd-card {
+    font-size: $fs-16;
+    font-weight: $fw-600;
+    color: $white;
+    background: var(--secondary-900);
+}

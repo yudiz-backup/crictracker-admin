@@ -1,0 +1,67 @@
+.team-preview {
+  height: 100%;
+  min-height: 435px;
+  background-image: url(../../images/cricket-bg.png);
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .team-main {
+    width: 100%;
+  }
+  .title {
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: normal;
+    color: #b2f7c8;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .p-list {
+    flex-wrap: wrap;
+    .p-box {
+      text-align: center;
+      margin: 0 8px;
+      max-width: 40px;
+      position: relative;
+      .p-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        overflow: hidden;
+        background: var(--secondary-700);
+        font-size: $fs-26 + 1;
+      }
+      .p-name {
+        color: var(--secondary-200);
+        font-size: 8px;
+        background-color: var(--secondary-900);
+        border-radius: 4px;
+        padding: 2px;
+        margin: 5px 0 3px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .credit {
+        font-size: 10px;
+        color: var(--secondary-200);
+        margin: 0;
+      }
+      .c_vc{
+        position: absolute;
+        top: 0;
+        left: -10px;
+        color: #FCFFFC;
+        background-color: var(--secondary-900);
+        border-radius: 100%;
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        font-size: $fs-12 - 1;
+        line-height: 22px;
+      }
+    }
+  }
+}

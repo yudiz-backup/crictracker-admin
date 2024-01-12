@@ -1,0 +1,40 @@
+.matchProbability {
+  padding: 16px;
+  border: 1px solid var(--secondary-600);
+  border-radius: 12px;
+    .title { margin-bottom: 12px;
+      button { font-weight: 700; }
+    }   
+    .item { margin-bottom: 16px; padding: 0 8px; position: relative;
+      &:last-child { margin-bottom: 0; }
+    }
+    .name { width: 110px; }
+    .flag { width: 32px; margin-right: 10px; }
+    .probability { position: absolute; height: 24px; background: $primary-400; opacity: 0.15; border-radius: 8px;
+      &.active { opacity: 1; }
+      &-background {
+        top: 0; left: 0; height: 24px; background: $primary-400; opacity: 0.15; border-radius: 8px;
+      }
+    }
+    .value { width: 50px; }
+    .votesOption {
+      button { margin-bottom: 12px; padding: 3px 9px; width: 100%; border-radius: 8px;
+        &:last-child { margin-bottom: 0; }
+      }
+    }
+  }
+
+   
+  @media (max-width: 991px) {
+    .matchProbability {
+      .item { padding: 0px; }
+      .name { width: 90px; }
+      .probability { height: 30px; }
+      .value { width: 40px; }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    
+    
+  }

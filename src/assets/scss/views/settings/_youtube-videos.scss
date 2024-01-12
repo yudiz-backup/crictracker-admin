@@ -1,0 +1,10 @@
+.category-dropdown{
+    width: 100%;
+    display: flex;
+    .react-select {
+        min-width: 300px;
+    }
+}
+.category-dropdown-td{
+    width: 40%;
+}

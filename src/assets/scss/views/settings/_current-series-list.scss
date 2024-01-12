@@ -1,0 +1,30 @@
+.current-series-list {
+  .current-series {
+    margin-bottom: 10px;
+  }
+  .series-selector {
+    width: 40%;
+    margin-right: 24px;
+    label {
+      text-transform: uppercase;
+    }
+  }
+  .priority-selector {
+    width: 150px;
+    margin-right: 24px;
+    label {
+      text-transform: uppercase;
+    }
+  }
+  .delete-series {
+    width: 36px;
+    height: 36px;
+    border: radius 50%;
+    color: $primary-300;
+    border-color: #757982;
+    padding: 3px 8px;
+  }
+  .series-toggle{
+    font-size: 18px;
+  }
+}

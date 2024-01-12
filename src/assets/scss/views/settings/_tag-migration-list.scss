@@ -1,0 +1,57 @@
+.tag-migration-list {
+  tbody td {
+    &:nth-child(2) {
+      width: 280px;
+    }
+    &:last-child {
+      width: 180px;
+    }
+  }
+  thead th {
+    &:nth-child(6) {
+      width: 120px;
+    }
+  }
+  .icons {
+    i {
+      background-color: $primary-200;
+      border-radius: 4px;
+      color: $primary-400;
+      vertical-align: middle;
+      padding: 2px;
+      font-size: $fs-14;
+      margin-right: 8px;
+    }
+  }
+  .btn-b {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    .btn + .btn {
+      margin-left: 5px;
+    }
+  }
+  @include media-max(xl) {
+    .btn-b {
+      opacity: 0;
+    }
+  }
+  @include media-max(lg) {
+    tr td {
+      white-space: nowrap;
+    }
+    ul li {
+      white-space: nowrap;
+      margin: 5px;
+    }
+  }
+}
+
+.migration-dropdown{
+    display: flex;
+    .react-select {
+        min-width: 300px;
+    }
+}
+.migration-dropdown-td{
+    width: 35%;
+}

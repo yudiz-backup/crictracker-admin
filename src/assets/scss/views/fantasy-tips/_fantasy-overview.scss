@@ -1,0 +1,122 @@
+.match-info {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background-color: #23272e;
+}
+.match-head {
+  border-bottom: 1px solid #323842;
+  margin-bottom: 16px;
+}
+.team-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  p {
+    color: $primary-200;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.team {
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    width: 50px;
+    margin-right: 16px;
+  }
+}
+
+.team-name-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.probabel-xi {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background-color: #23272e;
+}
+
+.probabel-xi-head {
+  border-bottom: 1px solid #323842;
+  margin-bottom: 16px;
+}
+
+.player-box {
+  padding: 2px 16px;
+  background-color: #323842;
+  border-radius: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.border-block {
+  padding: 0px 32px;
+  border-right: 1px solid #323842;
+  border-left: 1px solid #323842;
+}
+
+.player-name {
+  padding: 8px 0px;
+  i {
+    margin: 0px 2px;
+    font-size: 16px;
+    opacity: 0.5;
+  }
+}
+
+.player-box input {
+  &:disabled + .captain {
+    opacity: 0.5;
+    cursor: default;
+  }
+  &:checked + .captain {
+    background: $primary-400;
+    border-color: $primary-400;
+    color: $white;
+  }
+}
+.close-btn.btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 4px;
+}
+.close-btn.btn:hover {
+  background: none;
+}
+.form-check-input:checked[type='checkbox'] ~ label {
+  color: $primary-300;
+}
+.fantasy-captain {
+  height: 24px;
+  width: 24px;
+  border: 1px solid #50545d;
+  border-radius: 100%;
+  cursor: pointer;
+  color: $white;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  margin: 0px 2px;
+  padding: 4px 2px;
+}
+
+.input:checked[type='checkbox'] {
+  display: none;
+  background: $primary-400;
+  border-color: $primary-400;
+  color: $white;
+}
+
+@media (max-width: 1199px) {
+  .border-block {
+    padding: 0px 10px;
+  }
+}

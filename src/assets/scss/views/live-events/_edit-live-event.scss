@@ -1,0 +1,121 @@
+.live-article-content {
+  padding: 16px;
+  border: 1px solid var(--secondary-600);
+  border-radius: 12px;
+
+  p {
+    margin-bottom: 6px;
+  }
+
+  .image {
+    img {
+      border-radius: 12px;
+    }
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.d-author-live {
+  border-radius: 8px;
+  z-index: 99;
+  background-color: var(--secondary-700);
+  padding-left: 5px;
+  .country-option {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.live-events-sidebar {
+  background-color: rgba(34, 47, 63, 0.4);
+  position: sticky;
+  top: 80px;
+  height: calc( 100vh - 190px );
+  // height: 590px;
+  --bs-gutter-x: 0px;
+  overflow-y: scroll;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-editor-content{
+    width: calc( 100% - 56px );
+  }
+
+  &-loader {
+    z-index: 100;
+    color:#fff;
+  }
+
+  &-container {
+    position: sticky;
+    top: 84px;
+  }
+
+  &-content {
+    width: 100%;
+    padding-left: 36px;
+  }
+
+  &-header {
+    background-color: #151e2b;
+    z-index: 99;
+
+    .nav-item {
+      padding: 0 4px;
+    }
+  }
+
+  &-timeline-hr {
+    width: 1px;
+    margin-right: -20px;
+    background-color: var(--secondary-600);
+  }
+
+  &-timeline-hr-commentary{
+    width: 1px;
+    margin-right: -14px;
+    background-color: var(--secondary-600);
+  } 
+
+  .live-events-label {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--secondary-600);
+    border-radius: 50%;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: #151e2b;
+  }
+
+  .date-with-time {
+    font-size: 10px;
+    background-color: #151e2b;
+    white-space: nowrap;
+  }
+
+  .commentary {
+    font-size: 18px;
+    background-color: #151e2b;
+    white-space: nowrap;
+  }
+}
+
+// .live-events-editor{
+//     position: sticky;
+//     top: 24px;
+// }
+.team-box {
+  .team-row {
+    gap: 10px;
+  }
+  .one {
+  }
+  .two {
+  }
+}

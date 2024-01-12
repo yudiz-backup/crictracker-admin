@@ -1,0 +1,193 @@
+.fantasy-tips-list {
+  tbody td {
+    vertical-align: top;
+    &:nth-child(1) {
+      min-width: 350px;
+    }
+    &:nth-child(2) {
+      min-width: 600px;
+    }
+    &:hover {
+      .btn-b {
+        opacity: 1;
+      }
+    }
+  }
+  &.data-table thead th:not(:first-child):last-child {
+    text-align: left;
+  }
+  .icons {
+    i {
+      background-color: $primary-200;
+      border-radius: 4px;
+      color: $primary-400;
+      vertical-align: middle;
+      padding: 2px;
+      font-size: $fs-14;
+      margin-right: 8px;
+    }
+  }
+  .title {
+    font-size: $fs-16;
+    color: var(--secondary-200);
+    line-height: 1.35;
+    margin: 5px 0 0 0;
+  }
+  .date {
+    font-size: $fs-12;
+    color: var(--secondary-400);
+    margin: 6px 0 0 0;
+    span {
+      color: $primary-200;
+      text-transform: uppercase;
+      border-radius: 4px;
+      background-color: var(--secondary-700);
+      display: inline-block;
+      padding: 0px 5px;
+      margin-right: 4px;
+      & ~ span {
+        margin-left: 12px;
+      }
+    }
+  }
+  .fantasy-data {
+    font-size: $fs-12;
+    color: var(--secondary-400);
+    margin: 6px 0 0 0;
+  }
+  .round-separator {
+    height: 5px;
+    width: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: var(--secondary-700);
+    &.success {
+      background: $green-300;
+    }
+    &.warning {
+      background: $orange-400;
+    }
+    &.danger {
+      background-color: $red-300;
+    }
+    &.secondary {
+      background-color: var(--secondary-400);
+    }
+    &.primary {
+      background-color: $primary-400;
+    }
+    &.info {
+      background-color: $purple-200;
+    }
+  }
+  .cat {
+    font-size: $fs-16;
+    color: var(--secondary-200);
+    font-weight: normal;
+    margin: 0;
+  }
+  .keyword {
+    font-size: $fs-14;
+    color: var(--secondary-200);
+    span {
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  }
+  .btn-b {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    .btn + .btn {
+      margin-left: 5px;
+    }
+  }
+  .dropdown-toggle {
+    &.info-button {
+      &:hover {
+        color: $white !important;
+      }
+    }
+  }
+  .dropdown-Menu {
+    background-color: var(--secondary-800);
+    color: var(--secondary-400);
+    padding: 0px;
+    overflow: hidden;
+    margin: 0px;
+    &.menu-info .dropdown-item {
+      color: var(--secondary-400);
+      font-size: $fs-12 - 1;
+      .lock-size {
+        font-size: $fs-12;
+        margin-left: -0px;
+      }
+      .info-font {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 4px;
+        margin-left: 10px;
+      }
+    }
+    .menu-body {
+      padding: 15px 15px 0px 15px;
+      .menu-title {
+        font-size: $fs-16;
+        font-weight: 600;
+      }
+      .menu-status {
+        font-weight: 400;
+        font-size: $fs-14 - 1;
+      }
+      .menu-info {
+        font-size: $fs-12 - 2;
+        font-weight: 400;
+      }
+    }
+    .menu-footer {
+      background-color: var(--secondary-700);
+      font-size: $fs-20;
+      text-align: center;
+      button {
+        padding: 0px;
+        margin: 10px;
+        // color:var(--secondary-200);
+        // &:hover{
+        //   background-color : transparent;
+        // }
+        // &:hover::after{
+        //     background-color:transparent;
+        // }
+      }
+    }
+  }
+  @include media-max(xl) {
+    .btn-b {
+      opacity: 0;
+    }
+  }
+}
+
+.btn.over-view {
+  background-color: var(--secondary-700);
+  border-color: var(--secondary-700);
+  color: var(--secondary-200);
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: $fs-13;
+  text-transform: capitalize;
+  &.active,
+  &:hover {
+    background-color: var(--secondary-600);
+    border-color: var(--secondary-600);
+  }
+}
+
+.show > .btn-primary.dropdown-toggle.over-view {
+  background-color: var(--secondary-600);
+  border-color: var(--secondary-600);
+}

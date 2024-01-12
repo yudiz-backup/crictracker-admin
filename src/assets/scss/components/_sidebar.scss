@@ -1,0 +1,162 @@
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 56px;
+  background-color: var(--secondary-900);
+  border-right: 1px solid var(--secondary-700);
+  z-index: 999;
+  transition: width 0.3s;
+  .logo {
+    padding: 12px 11px;
+    background-color: $primary-400;
+    border-radius: 0 0 50px 50px;
+    transition: all 0.3s;
+    height: 56px;
+  }
+  .menu {
+    height: calc(100% - 140px);
+    margin: 10px 0;
+    ul {
+      list-style-type: none;
+      li {
+        position: relative;
+        margin-top: 20px;
+        & + li {
+          margin-top: 24px;
+        }
+        a {
+          font-size: $fs-14;
+          color: var(--secondary-200);
+          text-transform: uppercase;
+          font-weight: $fw-700;
+          white-space: nowrap;
+          display: block;
+          padding: 0 9px;
+          i {
+            font-size: $fs-24;
+            font-weight: normal;
+            background-color: var(--secondary-800);
+            border: 1px solid #545454;
+            border-radius: 4px;
+            padding: 3px 6px;
+            display: inline-block;
+            vertical-align: -4px;
+            transition: all 0.3s;
+          }
+          &.active i {
+            background-color: $primary-300;
+            border-color: $primary-300;
+          }
+        }
+        .dropdown-menu {
+          top: -19px;
+          left: 100%;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s;
+          overflow:auto;
+          max-height: 300px;
+          li {
+            margin-top: 0;
+            a {
+              padding: 9px 27px;
+              font-weight: $fw-500;
+              text-transform: none;
+              &:hover {
+                @include media-min(xl) {
+                  color: $primary-200;
+                }
+              }
+              &.active {
+                color: $primary-300;
+              }
+            }
+          }
+        }
+        .drop-icon {
+          font-size: $fs-22;
+          position: absolute;
+          right: 3px;
+          top: 0;
+          padding: 5px;
+        }
+        @include media-min(xl) {
+          &:hover {
+            > a i {
+              background-color: $primary-300;
+              border-color: $primary-300;
+            }
+            > .dropdown-menu {
+              opacity: 1;
+              visibility: visible;
+            }
+            .drop-icon {
+              transform: rotate(180deg);
+              color: $primary-300;
+            }
+          }
+        }
+      }
+    }
+  }
+  .open-btn {
+    color: var(--secondary-100);
+    font-size: $fs-24;
+    margin-left: 11px;
+  }
+
+  // Expanded
+  &.expanded {
+    width: 250px;
+    .logo {
+      border-radius: 0 50px 50px 0;
+    }
+    .open-btn {
+      transform: rotate(180deg);
+    }
+    .menu {
+      ul {
+        li {
+          a {
+            overflow: hidden;
+            i {
+              margin-right: 12px;
+              padding: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-max(xl) {
+    .menu {
+      overflow-y: auto;
+      height: calc(100% - 120px);
+      ul {
+        li {
+          .dropdown-menu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            display: none;
+          }
+          &.open {
+            > .dropdown-menu {
+              display: block;
+            }
+            > a i {
+              background-color: $primary-300;
+              border-color: $primary-300;
+            }
+            .drop-icon {
+              transform: rotate(180deg);
+              color: $primary-300;
+            }
+          }
+        }
+      }
+    }
+  }
+}
